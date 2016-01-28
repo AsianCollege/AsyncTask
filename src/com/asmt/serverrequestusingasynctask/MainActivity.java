@@ -59,9 +59,11 @@ public class MainActivity extends Activity {
 		image = (ImageView) findViewById(R.id.imagethumb);
 		txtUpdate = (TextView) findViewById(R.id.txtUpdate);
 		webview = (WebView)findViewById(R.id.webView);
+		webview.setInitialScale(80);
 		WebSettings webSettings = webview.getSettings();
 		webSettings.setJavaScriptEnabled(true);
 		webview.setWebViewClient(new WebViewClient());
+		webview.setScrollBarStyle(WebView.SCROLLBARS_INSIDE_OVERLAY);
 		btnGo.setOnClickListener(new OnClickListener() {
 
 			@Override
